@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tuber - Video Streaming</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="icon-button" aria-label="Toggle menu">☰</button>
+          <div class="brand-wrap">
+            <div class="brand-mark">▶</div>
+            <span class="brand-name">Tuber</span>
+          </div>
+        </div>
+
+        <div class="search-wrap">
+          <input id="searchInput" type="text" placeholder="Search videos" />
+          <button class="search-button" aria-label="Search">⌕</button>
+        </div>
+
+        <div class="topbar-right">
+          <button class="create-button">+ Create</button>
+          <button class="icon-button" aria-label="Notifications">🔔</button>
+          <div class="user-avatar">BS</div>
+        </div>
+      </header>
+
+      <div class="content-shell">
+        <aside class="sidebar">
+          <nav>
+            <div class="nav-group">
+              <button class="nav-item active">Home</button>
+              <button class="nav-item">Shorts</button>
+              <button class="nav-item">Subscriptions</button>
+            </div>
+            <div class="divider"></div>
+            <div class="nav-group">
+              <button class="nav-item">Library</button>
+              <button class="nav-item">History</button>
+              <button class="nav-item">Watch later</button>
+              <button class="nav-item">Liked videos</button>
+            </div>
+            <div class="divider"></div>
+            <div class="nav-group">
+              <h3>Browse</h3>
+              <button class="nav-item">Gaming</button>
+              <button class="nav-item">Music</button>
+              <button class="nav-item">News</button>
+              <button class="nav-item">Sports</button>
+            </div>
+          </nav>
+        </aside>
+
+        <main class="main-content">
+          <section class="featured-row">
+            <div class="featured-video-wrap">
+              <video id="mainVideo" controls playsinline autoplay muted></video>
+            </div>
+
+            <div class="feature-panel">
+              <div class="feature-badge">Now Playing</div>
+              <h1 id="videoTitle">Amazing Nature Journey</h1>
+              <div class="meta-line">
+                <span id="videoStats">320K views</span>
+                <span>•</span>
+                <span id="videoAge">2 weeks ago</span>
+              </div>
+
+              <div class="channel-row">
+                <div class="channel-avatar" id="channelAvatar">ST</div>
+                <div>
+                  <div id="channelName">Tuber</div>
+                  <small id="channelSubscribers">2.4M subscribers</small>
+                </div>
+                <button class="subscribe-button">Subscribe</button>
+              </div>
+
+              <div class="description-box" id="videoDescription">
+                A cinematic journey through forests, snow peaks, and open roads.
+              </div>
+
+              <div class="action-row">
+                <button class="action-button">👍 12K</button>
+                <button class="action-button">👎</button>
+                <button class="action-button">💬 845</button>
+                <button class="action-button">↪ Share</button>
+              </div>
+            </div>
+          </section>
+
+          <section class="recommendations">
+            <div class="section-heading">
+              <h2>Recommended</h2>
+            </div>
+            <div id="videoGrid" class="video-grid"></div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
